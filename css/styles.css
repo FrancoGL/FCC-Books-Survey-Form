@@ -3,9 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-html {
-    font-family: 'Ubuntu', sans-serif;
+body {
+    font-family: 'Quicksand', sans-serif;
 }
 
 body::before {
@@ -16,131 +15,113 @@ body::before {
     height: 100%;
     width: 100%;
     z-index: -1;
-    background: var(--color-darkblue);
-    background-image: linear-gradient(
+    background-image:linear-gradient(
         115deg,
-        rgba(112, 66, 20, 0.8),
-        rgba(191, 204, 156, 0.7)
+        rgba(112, 66, 20, 0.5),
+        rgba(191, 204, 156, 0.5)
       ), url("../images/roman-kraft-X1exjxxBho4-unsplash.jpg");
+    filter: blur(5px);
 }
 
 .container {
-    width: 100%;
+    max-width: 1440px;
+    padding: 4rem;
 }
 
-header {
+.container header {
     width: 100%;
     text-align: center;
-    padding: 1rem 0;
-}
-
-header #title, #description {
+    padding: 1rem;
     color: #fff;
-    margin: 0 0 1rem 0;
 }
 
-form {
-    width: 35rem;
-    background: rgba(255, 255, 255, 0.76);
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.877);
+    padding: 1.3rem;
+    border-radius: 5px;
     margin: 0 auto;
-    padding: 2rem;
-    border-radius: 10px;
 }
 
-.form-group {
+.form-wrapper .form-group {
+    /* border: 1px solid red; */
     margin: 0 0 1rem 0;
     padding: 0.5rem 0.5rem;
     border: 1px solid #000;
     border-radius: 5px;
 }
 
-#name-label, #email-label, #number-label, #other-genre-label {
-    display: block;
-    margin: 0 0 0.5rem 0;
-    font-size: 1.2rem;
-}
-
-#name, #email, #number, #other-genre {
-    width: 90%;
-    padding: 0.5rem;
-    border-style: none;
-    font-size: 0.9rem;
-}
-
-#name:focus{
+.form-wrapper .b-group {
     border: none;
+    margin-bottom: 0;
 }
 
-.form-p {
-    font-size: 1.2rem;
-    margin: 0 0 1rem 0;
+.form-group p, label {
+    font-weight: 500;
 }
 
-select {
-    width: 90%;
-    padding: 0.5rem;
-    font-size: 0.9rem;
+.form-group p {
+    margin: 0 0 0.6rem 0;
 }
 
-.radio-input {
-    margin: 0 0 0.5rem 0;
-}
-
-.radio-input input {
-    margin: 0 0.5rem 0 0;
-}
-
-.check-in {
+.form-group label {
     display: block;
-    margin: 0 0 1rem 0;
 }
-.check-in input[type="checkbox"] {
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea, select, button {
+    width: 100%;
+    margin: 0.6rem 0 0 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.form-group input[type=radio],
+.form-group input[type="checkbox"] {
     margin: 0 0.5rem 0 0;
 }
 
-textarea {
-    width: 90%;
-    padding: 1rem;
-    font-size: 1.1rem;
+.form-group textarea {
+    font-size: 1.25rem;
 }
 
-#submit {
-    border-style: none;
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-    background: rgb(158, 106, 54,0.8);
-    border-radius: 5px;
-}
-
-#submit:hover {
-    background: rgba(112, 66, 20);
+.form-group button {
+    margin: 0;
+    border: none;
     color: #fff;
-    transition: background 555ms;
+    background-color: #733934;
+    cursor: pointer;
 }
 
+.form-group button:hover {
+    background-color: #a65a49;
+    transition: background-color 1s ease-out;
+}
 
-@media (max-width: 600px) {
-    form {
-        width: 30rem;
+@media (min-width: 700px) {
+    .container header {
+        width: 32rem;
+        margin: 0 auto;
+    }
+
+    .form-wrapper {
+        width: 32rem;
     }
 }
 
-@media (max-width: 500px) {
-    form {
+@media (max-width: 550px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .container {
         padding: 1rem;
-        width: 25rem;
-    }
-}
-
-@media (max-width: 425px) {
-    form {
-        width: 22rem;
-    }
-}
-
-@media (max-width: 370px) {
-    form {
-        width: 20rem;
     }
 }
