@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--color-darkblue);
+    background-image: linear-gradient(
+        115deg,
+        rgba(112, 66, 20, 0.8),
+        rgba(191, 204, 156, 0.7)
+      ), url("../images/roman-kraft-X1exjxxBho4-unsplash.jpg");
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 35rem;
+}
+
+header #title, #description {
+    color: #fff;
+    margin: 0 0 1rem;
+}
+
+form {
+    width: 35rem;
+    background: rgba(255, 255, 255, 0.76);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin: 0 0 1rem 0;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+#name-label, #email-label, #number-label, #other-genre-label {
+    display: block;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+#name, #email, #number, #other-genre {
+    width: 25rem;
+    padding: 0.5rem;
+    border-style: none;
+    font-size: 0.9rem;
+}
+
+#name:focus{
+    border: none;
+}
+
+.form-p {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+}
+
+select {
+    width: 25rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.radio-input {
+    margin: 0 0 0.5rem 0;
+}
+
+.radio-input input {
+    margin: 0 0.5rem 0 0;
+}
+
+.check-in {
+    display: block;
+    margin: 0 0 1rem 0;
+}
+.check-in input[type="checkbox"] {
+    margin: 0 0.5rem 0 0;
+}
+
+textarea {
+    width: 25rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+#submit {
+    border-style: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgb(158, 106, 54,0.8);
+    border-radius: 5px;
+}
+
+#submit:hover {
+    background: rgba(112, 66, 20);
+    color: #fff;
+    transition: background 555ms;
+}
