@@ -104,13 +104,16 @@ body::before {
 }
 
 @media (min-width: 700px) {
+    .container {
+        padding: 2rem;
+    }
     .container header {
-        width: 32rem;
+        width: 33rem;
         margin: 0 auto;
     }
 
     .form-wrapper {
-        width: 32rem;
+        width: 33rem;
     }
 }
 
